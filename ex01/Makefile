@@ -6,7 +6,7 @@
 #    By: itan <itan@student.42kl.edu.my>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 20:55:16 by itan              #+#    #+#              #
-#    Updated: 2023/03/22 22:16:23 by itan             ###   ########.fr        #
+#    Updated: 2023/03/23 19:47:41 by itan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ AR		= ar -rcs
 CC		= g++
 CFLAGS	= -Wall -Werror -Wextra -std=c++98
 RM		= rm -f
-INC		= $(addprefix -I , $(shell find ./ -type d))
+INC		= $(addprefix -I , $(shell find includes -type d))
 
 # this is for debugging
 DNAME	= debug.out
