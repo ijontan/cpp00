@@ -6,7 +6,7 @@
 /*   By: itan <itan@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 19:48:15 by itan              #+#    #+#             */
-/*   Updated: 2023/03/23 22:12:12 by itan             ###   ########.fr       */
+/*   Updated: 2023/03/26 16:52:00 by itan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ private:
 public:
     Contact(std::string first_name, std::string last_name, std::string nickname, std::string phone_number, std::string darkest_secret);
     ~Contact();
+    void print_contact_short();
+    void print_contact();
 };
 
 class AwesomePhonebook
@@ -39,7 +41,9 @@ private:
 public:
     AwesomePhonebook();
     ~AwesomePhonebook();
-    void add_contact(Contact contact);
+    void add_contact();
+    void search_contacts();
+    void show_contact();
 };
 
 #endif

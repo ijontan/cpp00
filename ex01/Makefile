@@ -6,15 +6,15 @@
 #    By: itan <itan@student.42kl.edu.my>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 20:55:16 by itan              #+#    #+#              #
-#    Updated: 2023/03/23 19:47:41 by itan             ###   ########.fr        #
+#    Updated: 2023/03/26 16:27:18 by itan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= awesome_phonebook
 
 # ** main src ** #
-SRC_DIR	= ./
-OBJ_DIR	= obj/
+SRC_DIR	= src
+OBJ_DIR	= obj
 
 # this is for mirroring the out dir
 OBJ_DIRS= $(subst $(SRC_DIR), $(OBJ_DIR), $(shell find $(SRC_DIR) -type d))
@@ -58,7 +58,7 @@ UNDERLINE	= \x1B[3m
 	
 all::	$(NAME)
 
-$(OBJ_DIR)/%.o: %.cpp
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 				@mkdir -p $(OBJ_DIRS)
 				@printf "$(YELLOW)$(BRIGHT)Generating %25s\t$(NORMAL)%.40s\r" "$(NAME) src objects..." $@
 				@$(CC) $(CFLAGS) $(INC) -c $< -o $@

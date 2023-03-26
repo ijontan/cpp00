@@ -6,7 +6,7 @@
 /*   By: itan <itan@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 22:14:12 by itan              #+#    #+#             */
-/*   Updated: 2023/03/23 22:05:36 by itan             ###   ########.fr       */
+/*   Updated: 2023/03/26 17:09:30 by itan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,14 @@ int main(void)
         std::cin >> command;
         if (command == "ADD")
         {
-            std::cout << "Please enter the first name: ";
+
+            phonebook.add_contact();
         }
         else if (command == "SEARCH")
-        {
-            std::cout << "SEARCH: ";
-            /* code */
-        }
+            phonebook.search_contacts();
         else if (command == "EXIT")
         {
-            std::cout << "EXIT: ";
+            std::cout << "EXITING..." << std::endl;
             break;
         }
         else
